@@ -1,0 +1,73 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img{
+max-width: 100%;
+}
+/*
+*   Globales
+*/
+
+
+
+.nombre-sitio{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.nombre-sitio span{
+    color: #FA91D0;
+}
+
+.nav-principal{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+}
+.contenedor-nav{
+    border-top: 1px solid #39FAF7;
+}
+.hero{
+    background-image: url("../img/principal.jpg");
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*
+*   Header, Navegacion and Hero
+*/
+
+.categoria-productos{
+    text-align: center;
+    color: #7503FF;
+    padding: 50px 0;
+}
+
+.listado-categorias{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+
+
+/*
+*   Listado Categorias
+*/
