@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-size: 62.5%;/*1rem = 10px*/
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -9,23 +10,41 @@ a{
     color: #000;
     text-decoration: none;
 }
+
 .contenedor{
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
 img{
-max-width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+h1, h2, h3{
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 5rem 0;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h2, h3{
+    font-size: 3rem;
 }
 /*
 *   Globales
-*/
-
-
+********************************************************************/
 
 .nombre-sitio{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5rem;
     text-align: center;
 }
 .nombre-sitio span{
@@ -33,10 +52,10 @@ max-width: 100%;
 }
 
 .nav-principal{
-    padding: 20px 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: space-around;
-    height: 100px;
+    height: 10rem;
     align-items: center;
 }
 .contenedor-nav{
@@ -44,30 +63,55 @@ max-width: 100%;
 }
 .hero{
     background-image: url("../img/principal.jpg");
-    height: 550px;
+    height: 55rem;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 /*
 *   Header, Navegacion and Hero
-*/
-
-.categoria-productos{
+********************************************************************/
+.categorias{
+    padding-top: 5rem;
+}
+.categorias h2{
+    color: #FA91D0;
     text-align: center;
-    color: #7503FF;
-    padding: 50px 0;
+
 }
 
 .listado-categorias{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 2rem;
 }
-
-
-
+.categoria{
+    transition: 1s;
+}
+.categoria:hover{
+    transform: scale(1.1);
+    background-color: #39FAF7;
+    border-bottom-right-radius: 1rem;  
+}
+.categoria a{
+    display: block;  
+     padding: 2rem;
+     font-size: 2rem;
+}
 
 /*
 *   Listado Categorias
-*/
+********************************************************************/
+
+.sobre-nosotros{
+    background-image: linear-gradient(to right, transparent 50%, #39FAF7 50%, #39FAF7 100%), url(../img/nosotros.jpg);
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 100%, 120rem;
+}
+
+/*
+*   Sobre Nosotros
+********************************************************************/
