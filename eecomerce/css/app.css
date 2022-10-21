@@ -60,9 +60,11 @@ h2, h3{
     padding: 1rem;
     transition: background-color .3s ease-out;
     text-align: center;   
+    border: none;
 }
 .btn:hover{
     background-color: #FFF003;
+    cursor: pointer;
 }
 /*
 *   utilidades
@@ -298,4 +300,71 @@ h2, h3{
 }
 /*
 *   Blog
+********************************************************************/
+
+.contenido-entrada-blog{
+    width: 60rem;
+    margin: 0 auto;
+}
+
+
+/*
+*   Entrada Blog
+********************************************************************/
+
+.galeria{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    
+}
+.galeria img{
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover;
+}
+/*
+*   Galeria
+********************************************************************/
+
+.formulario{
+    max-width: 60 rem;
+    margin: 0 auto;
+}   
+.formulario fieldset{
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+.formulario legend{
+    background-color: #FA91D0;
+    padding: 1rem;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+.campo{
+    display: flex;
+    margin: 2rem;
+}
+.campo label{
+    flex-basis: 10rem;
+}
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo datalist,
+.campo select{
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #e1e1e1;
+    border-radius: .7rem;
+    background-color: #fff;
+}
+/*
+*   Contacto
 ********************************************************************/
