@@ -1,0 +1,241 @@
+:root {
+    --azul: #0071b7;
+    --blanco: #FFF;
+    --naranja: #ff4f1e;
+}
+html {
+    font-size: 62.5%; /** 1REM = 10pX **/
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+
+body {
+    background-color: var(--azul);
+    font-family:  'Lato', sans-serif;
+    font-size: 1.6rem;
+}
+
+h1, h2 {
+    color: var(--blanco);
+    text-align: center;
+    margin: 5rem 0;
+    padding: 1rem;
+}
+.caja-curso {
+    background-color: var(--naranja);
+    text-align: center;
+    color: var(--blanco);
+    padding: 5rem;
+
+}
+.caja-curso h1 {
+    margin: 0;
+}
+.caja-curso p {
+    font-size: 2.4rem;
+}
+.caja-curso a {
+    font-size: 2.4rem;
+    padding: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0;
+}
+
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.box {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    border: 1rem solid #bb2b03;
+}
+
+.contenedor > div {
+    background-color: var(--blanco);
+    padding: 5rem;
+}
+
+/*
+* Flex
+* El display flex se aplica al primer nivel de hijos de un contenedor
+**************************************************************************************************/
+/** 1 **/
+.d-flex{
+    /*Lo que hace el display flex por default de mostrar los elementos como si fueran inline-block y los alineara en fila de izquierda a derecha*/
+    display: flex;
+}
+
+/** 2 **/
+.d-flex-2{
+    display: flex;
+    /** Por default display flex se pone en una direccion de linea de izquierda a derecha ( flex-direction:row)
+    **    Pero esto lo podemos cambiar con las siguientes opciones
+    **    row - Posicion por default, en linea de izquierda a derecha
+    **    row-reverse - Se pone de derecha a izquierda e invierte el orden de los elementos, empieza por el ultimo
+    **    column - Se pone en columna, uno abajo de otro
+    **    column-reverse - Se pone en columna pero invierte el orden de los elementos, de abajo a arriba
+    */
+    flex-direction: row;
+    
+}
+
+/** 3 **/
+.d-flex-3{
+    display: flex;
+    justify-content: space-around;
+    /**
+    **  Justify-content cuando la direccion es row sirve para acomodar los elementos atraves de todo el espacio en la linea que tengan disponible
+    **  flex-start - Es el alineamiento por default, de izquierda a derecha empezando por el inicio de la izquierda
+    **  flex-end - Este empieza de derecha a derecha como el flex-direction:row-reverse con la diferencia de que no invierte el orden de los elementos, el primero sigue siendo el 1
+    **  center - Centra los elementos
+    **  space-between, space-around, space-evenly - Separa los elementos dando cierto espacio entre cada uno, el espacio dependera de cual escojamos
+    */
+}
+
+/** 4 **/
+.d-flex-4{
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: space-between;
+    /**
+    **  Justify-content cuando la direccion es column funciona igual que cuando es row, con la diferencia que alinea verticalmente
+    */
+}
+
+/** 5 **/
+.d-flex-5{
+    display: flex;
+    height: 700px;
+    align-items: center;
+    /**
+    **  align-items sirve para alinear los elementos verticalmente, nos los acomoda como justify-content, si no que los acomoda al inicio, al centro o al final a todo el grupo de elementos
+    **  flex-start - Los alinea al inicio
+    **  center - Los alinea al centro
+    **  flex-end - Los alinea al final
+    **  stretch - Los estira para que esten desde el inicio hasta abajo ( Es el valor por default )
+    */
+}
+
+/** 6 **/
+.d-flex-6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /**
+    **  align-items cuando la direccion es columna sirve para alinear los elementos horizontalmente, los coloca al grupo de elementos al inicio a la izquierda hasta arriba, al centro desde arriba y a la derecha de arriba
+    **  flex-start - Al inicio hasta arriba
+    **  center - Al centro hasta arriba
+    **  flex-end - Al fin hasta arriba
+    **  stretch - Los estira hacia los lados
+    */
+}
+
+/** 7 **/
+.d-flex-7{
+    display: flex;
+    height: 800px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/** 8 **/
+.d-flex-8{
+    display: flex;
+}
+.box{
+    flex-basis: 200px;
+    /**
+    **  El flex-basis se aplica a los hijos a modificar y no al padre como en flexbox, flex-basis es similar a aplicar un tamaño con width pero con la diferencia que no es un tamaño forzoso, si no que es un tamaño del cual parte si es que el contenido mide mas se agrandara
+    */
+}
+
+/** 9 **/
+.d-flex-9{
+    display: flex;
+    justify-content: space-between;
+    /**
+    ** Gap - Sirve para dar separacion entre elementos, se aplica en el hijo
+    */
+}
+.d-flex-9 .box:nth-child(1){
+    /**
+    **  funcion calc() - sirve para hacer una operacion
+    */
+    flex-basis: calc(50% - 1rem);
+}
+.d-flex-9 .box:nth-child(2),
+.d-flex-9 .box:nth-child(3){
+    flex-basis: calc(25% - 1rem);
+}
+
+/** 10 **/
+.d-flex-10{
+    display: flex;
+    /**
+    **  flex-wrap: sirve para hacer saltos de linea cuando el espacio se acabe, por ejemplo si hay 5 elementos en un contenedor y les damos 50% de tamaño a cada uno sin el flex wrap lo que hara es que los elementos se saldran del contenedor y con flex wrap arreglaremos esto
+    */
+    flex-wrap: wrap;
+}
+.d-flex-10 .box{
+    flex-basis: 50%;
+}
+
+/** 11 **/
+.d-flex-11{
+    display: flex;
+}
+.d-flex .box:nth-child(1){
+    /**
+    **  flex-grow: Es para hacer que un elemento sea cierta cantidad de veces mas grande que otros
+    */
+    flex-grow: 1;/* En cada vuelva agregara 1px*/
+}
+.d-flex-11 .box:nth-child(2){
+    flex-grow: 2;
+}
+.d-flex-11 .box:nth-child(3){
+    flex-grow: 2;
+}
+
+/** 12 **/
+.d-flex-12{
+    display: flex;
+}
+.d-flex-12 .box{
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+.d-flex-12 .box:nth-child(3){
+    flex-shrink: 5;
+    /**
+    **  flex-shrink: es lo contrario a grow, este es el factor de decrecimiento, que tanto su tamaño se reduce a comparacion de los demas
+    */
+}
+
+/** 13 **/
+.d-flex-13{
+    display: flex;
+}
+.d-flex-13 .box{
+    flex: 1 0 33.3%;
+
+    /**
+    ** flex: es la acotacion de flex-basis, flex-grow y flex-shrink en una sola linea de codigo
+    ** en el orden de flex-grow - flex-shrink - flex basis
+    */
+}

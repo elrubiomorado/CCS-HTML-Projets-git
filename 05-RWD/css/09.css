@@ -1,0 +1,6 @@
+/**Imagenes responsive**/
+/**Es un sniped que nos sirve siempre para que la imagenes de nuestro sitio sean responsive**/
+img{
+    max-width: 100%;
+    display: block;/**Para quitar un margin que queda por debajo de la imagenes**/
+}

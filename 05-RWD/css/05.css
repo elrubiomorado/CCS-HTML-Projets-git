@@ -1,0 +1,26 @@
+/**Tamaños de media Querys standart**/
+
+/**For Mobile**/
+@media (min-width: 500px){
+    
+}
+
+/**For Tables**/
+@media (min-width: 768px){
+    
+}
+
+/**For Laptops 13 inches**/
+@media (min-width: 1024px){
+    
+}
+
+/**For Laptops or monitors smalls**/
+@media (min-width: 1200px){
+    
+}
+
+/**For monitors**/
+@media (min-width: 1600px){
+    
+}
