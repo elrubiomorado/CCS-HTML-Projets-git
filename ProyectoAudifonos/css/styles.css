@@ -371,6 +371,7 @@ img{
 .contenido-newsletter{
     display: grid;
     grid-template-rows: repeat(2, 30rem);
+    grid-template-rows: repeat(2, 1fr);
     gap: var(--separacion);
 }
 @media (min-width: 768px){
